@@ -57,9 +57,9 @@ debug:
 ############
 # patterns #
 ############
-$(LINT): out/%.lint: %
+$(LINT): out/%.lint: % scripts/php_lint.py
 	$(info doing [$@] from [$<])
-	$(Q)php -l $< > /dev/null
+	$(Q)scripts/php_lint.py $<
 	$(Q)pymakehelper touch_mkdir $@
 
 ############
