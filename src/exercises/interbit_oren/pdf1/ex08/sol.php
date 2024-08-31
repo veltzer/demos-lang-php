@@ -14,7 +14,7 @@
 		$saw_uppercase=false;
 		$two_consecutive=false;
 		for($i=0;$i<strlen($password);$i++) {
-			$curr=$password{$i};
+			$curr=$password[$i];
 			if(($curr>='a') && ($curr<='z')) {
 				$saw_lowercase=true;
 			}
@@ -30,7 +30,7 @@
 			$previous=$curr;
 			*/
 			if($i<strlen($password)-1) {
-				if($curr==$password{$i+1}) {
+				if($curr==$password[$i+1]) {
 					$two_consecutive=true;
 				}
 			}

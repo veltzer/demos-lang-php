@@ -12,7 +12,7 @@
 		$string=$_GET['string'];
 		$abc="abcdefghijklmnopqrstuvwxyz";
 		for($i=0;$i<strlen($abc);$i++) {
-			$curr=$abc{$i};
+			$curr=$abc[$i];
 			if(substr_count($string,$curr)==0) {
 				echo $curr."<br/>";
 			}
