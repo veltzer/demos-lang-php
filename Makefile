@@ -56,13 +56,12 @@ debug:
 	$(info LINT is $(LINT))
 	$(info ALL is $(ALL))
 
-
 ############
 # patterns #
 ############
 $(LINT): out/%.lint: %
 	$(info doing [$@] from [$<])
-	$(Q)php -l $<
+	$(Q)php -l $< > /dev/null
 	$(Q)pymakehelper touch_mkdir $@
 
 ############
