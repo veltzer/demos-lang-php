@@ -1,7 +1,5 @@
 <!--
 This example shows how to use associative arrays in PHP.
-
-	Mark Veltzer <mark@veltzer.net>
 -->
 <html>
 	<body>

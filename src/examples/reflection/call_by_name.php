@@ -1,7 +1,5 @@
 <!--
 This is an example of how to call a function by name
-
-	Mark Veltzer <mark@veltzer.net>
 -->
 <?php
 	function add($a,$b) {

@@ -1,7 +1,5 @@
 <!--
 This example shows how to use 'printf' functionality within php.
-
-	Mark Veltzer <mark@veltzer.net>
 -->
 <?php
 	$num=123456;

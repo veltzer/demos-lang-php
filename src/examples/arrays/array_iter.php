@@ -1,8 +1,6 @@
 <!--
 This piece show that you can iterate an associative array just like a regular
 array but you will get only the values of that array.
-
-	Mark Veltzer <mark@veltzer.net>
 -->
 <html>
 	<body>

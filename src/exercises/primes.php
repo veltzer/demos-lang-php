@@ -4,8 +4,6 @@ from 2 to a 100... Very trivial algorithm.
 One way to improve on it would be to scan from 2 to sqrt(100)
 instead of to 100-1. Another way would be some variation
 on the Eucledean algorithm...
-
-	Mark Veltzer <mark@veltzer.net>
 -->
 <?php
 	for($i=2;$i<100;$i++) {

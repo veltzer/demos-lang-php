@@ -3,8 +3,6 @@ A piece of code that dumps the _POST and _GET arrays via iteration.
 When you iterate them in a dictionary fashion (the standard way), you
 get them as key,value pairs. When you iterate them via values only
 you only get the values (this is standard php array behaviour).
-
-	Mark Veltzer <mark@veltzer.net>
 -->
 <html>
 	<body>

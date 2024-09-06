@@ -1,7 +1,5 @@
 <!--	
 This example shows the case sensitivity of arrays and objects.
-
-	Mark Veltzer <mark@veltzer.net>
 -->
 <?php
 $array=array();
