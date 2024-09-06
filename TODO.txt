@@ -1,5 +1,2 @@
 - add checking of html code.
 - add checking of python scripts.
-
-DONE:
-- added linting everyfile with php -l using a special script.
