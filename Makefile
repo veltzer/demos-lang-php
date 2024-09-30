@@ -11,7 +11,7 @@ DO_ALLDEP:=1
 #############
 # variables #
 #############
-SOURCES=$(shell find src -name "*.php")
+SOURCES=$(shell find src -type f -and -name "*.php")
 LINT:=$(addprefix out/,$(addsuffix .lint,$(SOURCES)))
 ALL:=
 
