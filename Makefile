@@ -62,10 +62,9 @@ $(LINT): out/%.lint: % scripts/php_lint.py
 	$(Q)scripts/php_lint.py $<
 	$(Q)pymakehelper touch_mkdir $@
 
-############
-# all deps #
-############
-
+##########
+# alldep #
+##########
 ifeq ($(DO_ALLDEP),1)
 .EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
 endif # DO_ALLDEP
