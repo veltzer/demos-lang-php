@@ -8,16 +8,13 @@ DO_PHP_LINT:=1
 # should we depend on the Makefile itself?
 DO_ALLDEP:=1
 
-#############
-# variables #
-#############
+########
+# code #
+########
 SOURCES=$(shell find src -type f -and -name "*.php")
 LINT:=$(addprefix out/,$(addsuffix .lint,$(SOURCES)))
 ALL:=
 
-########
-# code #
-########
 # silent stuff
 ifeq ($(DO_MKDBG),1)
 Q:=
