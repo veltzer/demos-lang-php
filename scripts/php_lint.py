@@ -36,7 +36,7 @@ def main():
         sys.exit(1)
     lines = []
     for line in result.stdout.split('\n') + result.stderr.split('\n'):
-        if line != f"No syntax errors detected in {filename}" and line != "":
+        if line not in (f"No syntax errors detected in {filename}", ""):
             lines.append(line)
     if lines:
         print("\n".join(lines), file=sys.stderr)
