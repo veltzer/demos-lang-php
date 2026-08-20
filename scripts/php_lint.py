@@ -8,8 +8,8 @@ It also does not allow to treat warnings as errors.
 """
 
 import os.path
-import sys
 import subprocess
+import sys
 
 BULLSHIT="bullshit"
 
