@@ -16,7 +16,7 @@ reject_dot_src_dirs = true
 # listed here must exist: rsconstruct rejects a missing one at config load.
 # Repos still on config/*.py keep a dep_inputs override in their local
 # overlay until converted.
-[processor.tera]
+[processor.generator.tera]
 dep_auto = [
 	"config/project.lua",
 	"config/personal.lua",
@@ -24,28 +24,28 @@ dep_auto = [
 ]
 src_dirs = ["tera.templates"]
 
-[processor.ruff]
+[processor.checker.ruff]
 src_dirs = ["src", "scripts", "config"]
 
 
-[processor.mypy]
+[processor.checker.mypy]
 src_dirs = ["src", "scripts", "config"]
 
-[processor.luacheck]
+[processor.checker.luacheck]
 src_dirs = ["config"]
 
 # ─── toml / yaml / json ──────────────────────────────────────────────────────
 
-[processor.taplo]
+[processor.checker.taplo]
 src_files = [".rumdl.toml", "pyproject.toml", "rsconstruct.toml"]
 
-[processor.tidy]
+[processor.checker.tidy]
 src_dirs = ["src"]
 
 # The Makefile ran php_lint.py (php -l syntax check) on each src/**/*.php.
 # rsconstruct has a php_lint processor that does exactly that; point it at src.
 # not linted: errors (deliberately invalid PHP demonstrating errors)
-[processor.php_lint]
+[processor.checker.php_lint]
 src_dirs = ["src"]
 
 # The php_lint processor needs the php CLI.
@@ -55,15 +55,15 @@ system = [
 ]
 
 # lint the GitHub Actions workflow files with actionlint
-[processor.actionlint]
+[processor.checker.actionlint]
 src_dirs = [".github/workflows"]
 
 # ─── markdown ────────────────────────────────────────────────────────────────
 
-[processor.rumdl]
+[processor.checker.rumdl]
 src_files = ["README.md"]
 
 # ─── xml / svg ───────────────────────────────────────────────────────────────
 
-[processor.xmllint]
+[processor.checker.xmllint]
 src_dirs = ["src/examples/tdd"]
