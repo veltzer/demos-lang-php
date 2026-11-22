@@ -5,7 +5,7 @@
 
 description: Demos for the php language
 
-project website: https://veltzer.github.io/demos-lang-php
+project website: <https://veltzer.github.io/demos-lang-php>
 
 author: Mark Veltzer
 
