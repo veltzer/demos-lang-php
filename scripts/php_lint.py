@@ -16,8 +16,8 @@ BULLSHIT="bullshit"
 
 def main():
     """ main entry point """
+    cmd = sys.argv[0]
     if len(sys.argv)!=2:
-        cmd = sys.argv[0]
         print(f"{cmd}: usage: {cmd} [filename]", file=sys.stderr)
         sys.exit(1)
     filename = sys.argv[1]
@@ -34,10 +34,10 @@ def main():
         print(result.stdout)
         print(result.stderr)
         sys.exit(1)
-    lines = []
-    for line in result.stdout.split('\n') + result.stderr.split('\n'):
-        if line not in (f"No syntax errors detected in {filename}", ""):
-            lines.append(line)
+    lines = [
+        line for line in result.stdout.split('\n') + result.stderr.split('\n')
+        if line not in (f"No syntax errors detected in {filename}", "")
+    ]
     if lines:
         print("\n".join(lines), file=sys.stderr)
         sys.exit(1)
